@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-areas:
+    "nav"
+    "menu"
+    "main"
+    "footer";
+    grid-template-columns: 15% auto;
+    grid-template-rows: 45px 0px auto 30px;
+    min-height: 100vh;
+}
+
+nav{
+    background-color: rgb(235, 11, 78);
+    color: bisque;
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: oblique;
+    padding: 10px;
+}
+
+.boton-nav  {
+    font-size: 25px;
+}
+
+menu{
+    background-image: url(https://plus.unsplash.com/premium_photo-1683120994739-2be0d817c0e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGNhYmVsbG98ZW58MHx8MHx8fDA%3D);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    grid-area: menu;
+}
+
+button  {
+    background-color: rgb(235, 11, 78);
+    color: bisque;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: oblique;
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+main{
+    background-color: rgb(250, 241, 233);
+    gap: 25px;
+    padding: 20px;
+    font-family: cursive;
+    grid-area: main;
+}
+
+.select {
+    font-size: 15px;
+    text-align: center;
+}
+
+h3  {
+    display: flex;
+    justify-content: center;
+}
+
+
+.card   {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    gap: 20px;
+    width: 300px;
+    height: 400px;
+}
+
+.card-body  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img-top   {
+    width: 200px;
+    height: 200px;
+}
+
+.card-title {
+    font-size: medium;
+    text-align: center;
+    border-bottom: 1px solid rgb(216, 167, 108);
+    padding-bottom: 5px;
+}
+
+.card-text  {
+    font-size: small;
+}
+
+.btn-pink   {
+    background-color: bisque;
+    color: rgb(235, 11, 78);
+    border-color: rgb(216, 167, 108);
+}
+
+.page-link {
+    color: rgb(235, 11, 78);
+    border-color: rgb(235, 11, 78);
+}
+
+footer  {
+    background-color: rgba(255, 228, 196, 0.678);
+    color: rgb(250, 133, 168);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    grid-area: footer;
+}
+
+@media screen and (max-width: 576px) {
+    body{
+        grid-template-areas:
+        "nav"
+        "menu"
+        "main"
+        "footer";
+        grid-template-columns: auto;
+        grid-template-rows: 45px 0px auto 30px;
+        min-height: 100vh;
+    }
+
+    menu    {
+        display: none;
+    }
+
+    .cards  {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    main    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+}
+
+@media screen and (min-width: 577px) {
+    body{
+        grid-template-areas:
+        "nav nav"
+        "menu main"
+        "menu footer";
+        grid-template-columns: 15% auto;
+        grid-template-rows: 45px auto 30px;
+        min-height: 100vh;
+    }  
+
+    main    {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cards    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+}      
